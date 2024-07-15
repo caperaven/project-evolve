@@ -4,12 +4,12 @@
  * method:
  * - createShape
  *
- * types of bricks: Which can be determined by enum brickType
- * - Standard Brick - durablity: 1
- * - Durable Brick - durability: 3
- * - Trick Brick - durability: 5
- * - Special Brick - durability: 7 - instant loss/power ups
- * - Steel Brick - durability: 10
+ * types of shapes: Which can be determined by enum brickType
+ * - Standard shape - durablity: 1
+ * - Durable shape - durability: 3
+ * - Trick shape - durability: 5
+ * - Special shape - durability: 7 - instant loss/power ups
+ * - Steel shape - durability: 10
  */
 
 class ShapeFactory {

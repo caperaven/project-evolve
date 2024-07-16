@@ -1,0 +1,1 @@
+import{compileExpression as a}from"./condition-actions.js";class f{static async perform(e,s,n,t,i){const c=await crs.process.getValue(e.args.contingents,s,n,t);for(const o of Object.keys(c))if(a(o,n)(s,n,t)){const r=c[o];await crs.process.runStep(r,s,n,t,i)}}}crs.intent.contingent=f;export{f as ContingentActions};

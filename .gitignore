@@ -1,0 +1,13 @@
+/node_modules/
+package-lock.json
+yarn.lock
+yarn-error.log
+/coverage/
+/publish/
+/rust/html_parser/target/
+.idea/
+*.iml
+dist/
+/custom-bundles/code-mirror-bundle/node_modules/
+/custom-bundles/code-mirror-bundle/package-lock.json
+deno.lock

@@ -7,7 +7,7 @@
  * types of shapes: Which can be determined by enum brickType
  * - Standard shape - durablity: 1
  * - Durable shape - durability: 3
- * - Trick shape - durability: 5
+ * - Trick shape - durability: 5 changes the pace of the game / power downs
  * - Special shape - durability: 7 - instant loss/power ups
  * - Steel shape - durability: 10
  */

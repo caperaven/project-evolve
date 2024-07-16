@@ -11,7 +11,7 @@ Evolving skills through game development
 
 - once the timer reaches a certain count the speed of the shapes are increased and the special shapes are added to the falling shapes.
 
-#### Functionaliy:
+#### Functionality:
 
 - Player can move the shooter left, right, up and down.
 - Player can shoot projectiles.

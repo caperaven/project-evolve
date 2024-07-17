@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link href="./styles/style.css" rel="stylesheet">
+    <title>Project Evolve</title>
+</head>
+<body>
+    <svg xmlns="http://www.w3.org/2000/svg" class="hide">
+        <symbol id="menu" viewBox="0 0 24 24">
+            <path d="M0 0h24v24H0z" fill="none"/>
+            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+        </symbol>
+    </svg>
+
+    <header>
+        <!---Todo:add welcome page and side panel menu and routing which usings inflation and binding-->
+<!--        <aside classlist.if="$globals.isMenuOpen ==  true? 'open'" click.setValue="$globals.isMenuOpen = !$globals.isMenuOpen">-->
+<!--            <nav id="main-menu" aria-label="main menu">-->
+<!--                <ol>-->
+<!--                    <template for="route of routes">-->
+<!--                        <li><a href.one-way="route.hash">${route.title}</a></li>-->
+<!--                    </template>-->
+<!--                </ol>-->
+<!--            </nav>-->
+<!--        </aside>-->
+        <h1>Game Environment</h1>
+        <div>
+            <button data-value="on" click.call="debugStateChanged">On</button>
+            <button data-value="off" click.call="debugStateChanged" aria-selected="true">Off</button>
+        </div>
+
+    </header>
+
+    <footer>
+        <span>copyright @me</span>
+    </footer>
+
+    <script type="module" src="./index.js"></script>
+</body>
+</html>

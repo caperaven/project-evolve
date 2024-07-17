@@ -1,0 +1,1 @@
+class g{static async perform(c,t,a,s,e){const l=await crs.process.getValue(c.args.check,t,a,s),u=await crs.process.getValue(c.args.cases,t,a,s),i=await crs.process.getValue(c.args.default,t,a,s),r=u[l]||i;if(r==null)return;const n=await crs.getNextStep(a,r,e);n!=null&&await crs.process.runStep(n,t,a,s,e)}}crs.intent.switch=g;export{g as SwitchActions};

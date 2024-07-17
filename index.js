@@ -18,7 +18,6 @@ import "./packages/crs-process-api/action-systems/data-processing-actions.js";
 import "./packages/crs-process-api/action-systems/schema-actions.js";
 
 await initialize("/packages/crs-process-api");
-await import("/packages/crs-process-api/components/view-loader/view-loader.js");
 
 
 export class IndexViewModel {
@@ -60,7 +59,8 @@ export class IndexViewModel {
     }
 
     async debugStateChanged(event) {
-        if (event.detail == "on") {
+        const action = event.composedPath()[0].dataset.value;
+        if (action == "on") {
             return await crs.call("debug", "start_monitor_events", {});
         }
 

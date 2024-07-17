@@ -28,7 +28,8 @@ Evolving skills through game development
 
 #### Required Patterns To be used:
 
-- Singleton / Separation of Concerns
+- Separation of Concerns
 - Factory
+- Builder
 - Convention over Code
 

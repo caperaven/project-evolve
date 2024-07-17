@@ -7,27 +7,36 @@
     <title>Project Evolve</title>
 </head>
 <body>
-<svg xmlns="http://www.w3.org/2000/svg" class="hide">
-    <symbol id="menu" viewBox="0 0 24 24">
-        <path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
-    </symbol>
-</svg>
+    <svg xmlns="http://www.w3.org/2000/svg" class="hide">
+        <symbol id="menu" viewBox="0 0 24 24">
+            <path d="M0 0h24v24H0z" fill="none"/>
+            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+        </symbol>
+    </svg>
 
-<header>
-    <h1>Game Environment</h1>
-    <options-toolbar change.call="debugStateChanged">
-        <button data-value="on">On</button>
-        <button data-value="off" aria-selected="true">Off</button>
-    </options-toolbar>
-</header>
+    <header>
+        <!---Todo:add welcome page and side panel menu and routing which usings inflation and binding-->
+<!--        <aside classlist.if="$globals.isMenuOpen ==  true? 'open'" click.setValue="$globals.isMenuOpen = !$globals.isMenuOpen">-->
+<!--            <nav id="main-menu" aria-label="main menu">-->
+<!--                <ol>-->
+<!--                    <template for="route of routes">-->
+<!--                        <li><a href.one-way="route.hash">${route.title}</a></li>-->
+<!--                    </template>-->
+<!--                </ol>-->
+<!--            </nav>-->
+<!--        </aside>-->
+        <h1>Game Environment</h1>
+        <div>
+            <button data-value="on" click.call="debugStateChanged">On</button>
+            <button data-value="off" click.call="debugStateChanged" aria-selected="true">Off</button>
+        </div>
 
-<view-loader data-routes="app/routes.json">
-</view-loader>
+    </header>
 
-<footer>
-    <span>copyright @me</span>
-</footer>
+    <footer>
+        <span>copyright @me</span>
+    </footer>
 
-<script src="./index.js" type="module"></script>
+    <script type="module" src="./index.js"></script>
 </body>
 </html>

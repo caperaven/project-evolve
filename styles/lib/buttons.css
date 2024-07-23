@@ -1,0 +1,164 @@
+/*Added*/
+div.button-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    flex-wrap: wrap;
+}
+
+button {
+    outline: none;
+    border: 0;
+    cursor: pointer;
+    background: var(--grey-surface);
+    border-radius: var(--radius);
+    padding: 0.75rem;
+    box-sizing: border-box;
+    height: 2.5rem;
+    min-width: 2rem;
+    margin: 0 0.313rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+button.left {
+    border-radius: var(--radius) 0 0 var(--radius) !important;
+}
+
+button.right {
+    border-radius: 0 var(--radius) var(--radius) 0 !important;
+    margin-left: -0.15rem;
+    height: 2.5rem;
+    width: 2.5rem;
+    padding: 0;
+}
+
+button.center {
+    border: 0;
+}
+
+button:hover {
+    outline: none;
+    border: 0;
+}
+
+button.success {
+    background-color: var(--green) !important;
+    color: var(--alt-fg) !important;
+}
+
+button.error {
+    background-color: var(--red) !important;
+    color: var(--alt-fg) !important;
+}
+
+button:active:not([disabled]) {
+    background-color: var(--blue) !important;
+    color: var(--alt-fg);
+    fill: var(--alt-fg);
+}
+
+button.primary {
+    background-color: var(--grey);
+    color: var(--alt-fg);
+}
+
+button.primary:hover {
+    background-color: var(--grey-s1);
+    color: var(--grey-s3);
+}
+
+button.primary[disabled] {
+    background-color: var(--grey-surface);
+    color: var(--grey-s1);
+}
+
+button.secondary {
+    background-color: var(--alt-fg);
+    border: var(--border);
+    border-color: var(--grey);
+}
+
+button.secondary:hover, button.icon:hover, button.alt:hover {
+    background-color: var(--grey-s2);
+}
+
+button.secondary.success, button.icon.success {
+    border: 0;
+}
+
+button.secondary.error, button.icon.success {
+    border: 0;
+}
+
+button.icon {
+    font-family: crsfrw;
+    display: flex;
+    align-items: center;
+    font-size: 1.25rem;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+button.icon svg {
+    width: 2rem;
+    height: 2rem;
+}
+
+button.transparent {
+    background: transparent;
+}
+
+
+button[data-icon-left]::before, button[data-icon-right]::after {
+    font-family: crsfrw;
+    font-size: 1.25rem;
+    display: flex;
+    font-weight: 500;
+}
+
+button[data-icon-left]::before {
+    content: attr(data-icon-left);
+    margin-right: 0.5rem;
+    font-weight: 500;
+}
+
+button[data-icon-right]::after {
+    content: attr(data-icon-right);
+    margin-left: 0.5rem;
+    font-weight: 500;
+}
+
+button[data-icon-right="loader"]::after {
+    animation: busy 0.5s linear infinite;
+    font-weight: 500;
+}
+
+button.error::after {
+    content: "info-outline";
+    margin-left: 0.5rem;
+    font-family: crsfrw;
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+button.success::after {
+    content: "check";
+    margin-left: 0.5rem;
+    font-family: crsfrw;
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+@keyframes busy {
+    0% {
+        rotate: 0deg;
+    }
+    100% {
+        rotate: 360deg;
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "default": "welcome",
+    "root": "games",
+    
+    "definition": {
+        "parameters": {
+            "0": "view"
+        }
+    },
+    
+    "routes": [
+        {
+            "title": "Welcome",
+            "view": "welcome"
+        },
+        {
+            "title": "Shape Shooter",
+            "view": "shape-shooter"
+        }
+    ]
+}

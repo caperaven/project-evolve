@@ -1,0 +1,19 @@
+.narrow-scrollbar::-webkit-scrollbar {
+    width: 0.875rem;
+}
+
+.narrow-scrollbar::-webkit-scrollbar-thumb {
+    border-radius: 1rem;
+    background-color: var(--grey-s2);
+    border: 0.25rem solid var(--window);
+}
+
+.narrow-scrollbar::-webkit-scrollbar-track {
+    background: var(--window);
+}
+
+/*Firefox*/
+.narrow-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: var(--grey-s2) var(--window); 
+}

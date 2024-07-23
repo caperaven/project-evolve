@@ -3,35 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
-    <link href="./styles/style.css" rel="stylesheet">
+    <link href="./styles/styles.css" rel="stylesheet">
     <title>Project Evolve</title>
 </head>
 <body>
     <svg xmlns="http://www.w3.org/2000/svg" class="hide">
         <symbol id="menu" viewBox="0 0 24 24">
-            <path d="M0 0h24v24H0z" fill="none"/>
-            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+            <path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
         </symbol>
     </svg>
 
     <header>
-        <!---Todo:add welcome page and side panel menu and routing which usings inflation and binding-->
-<!--        <aside classlist.if="$globals.isMenuOpen ==  true? 'open'" click.setValue="$globals.isMenuOpen = !$globals.isMenuOpen">-->
-<!--            <nav id="main-menu" aria-label="main menu">-->
-<!--                <ol>-->
-<!--                    <template for="route of routes">-->
-<!--                        <li><a href.one-way="route.hash">${route.title}</a></li>-->
-<!--                    </template>-->
-<!--                </ol>-->
-<!--            </nav>-->
-<!--        </aside>-->
-        <h1>Game Environment</h1>
-        <div>
-            <button data-value="on" click.call="debugStateChanged">On</button>
-            <button data-value="off" click.call="debugStateChanged" aria-selected="true">Off</button>
-        </div>
-
+        <button aria-label="menu" class="icon" click.setvalue="$globals.isMenuOpen = !$globals.isMenuOpen" classlist.if="$globals.isMenuOpen == true ? 'highlight-fill'"><svg><use xlink:href="#menu" /></svg></button>
+        <h1>Project Evolve</h1>
+        <options-toolbar change.call="debugStateChanged">
+            <button data-value="on">On</button>
+            <button data-value="off" aria-selected="true">Off</button>
+        </options-toolbar>
     </header>
+
+    <view-loader data-routes="games/routes.json">
+        <main autofocus tabindex="0"></main>
+
+        <aside classlist.if="$globals.isMenuOpen ==  true? 'open'" click.setvalue="$globals.isMenuOpen = !$globals.isMenuOpen">
+            <nav id="main-menu" aria-label="main menu">
+                <ul>
+                    <li><a href="/welcome">Welcome</a></li>
+                    <li><a href="/shape-shooter">Shape Shooter</a></li>
+                </ul>
+            </nav>
+        </aside>
+    </view-loader>
+
 
     <footer>
         <span>copyright @me</span>

@@ -5,7 +5,7 @@
  *  - Triangle
  *  - Rectangle
  */
-export const shapeTypes = Object.freeze({
+export const ShapeTypes = Object.freeze({
     CIRCLE: "circle",
     SQUARE: "square",
     TRIANGLE: "triangle",
